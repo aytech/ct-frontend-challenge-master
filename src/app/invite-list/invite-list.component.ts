@@ -11,8 +11,13 @@ export class InviteListComponent implements OnInit {
   users$: Observable<User[]>;
 
   constructor(private inviteService: InviteService) {
-    this.users$ = this.inviteService.get();
+    this.users$ = this.inviteService.getUsers();
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
+
+  getTotal() {
+    return this.inviteService.invitedCount;
+  }
 }

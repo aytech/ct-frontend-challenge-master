@@ -19,3 +19,7 @@ table {
 table tr, td, th {
   border: 1px solid #ccc;
 }
+
+table td.strong {
+    font-weight: bold;
+}

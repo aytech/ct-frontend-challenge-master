@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { InviteListComponent } from './invite-list/invite-list.component';
 import { InviteComponent } from './invite/invite.component';
+import { InviteService } from './service/invite.service';
 
 
 @NgModule({
@@ -18,7 +19,10 @@ import { InviteComponent } from './invite/invite.component';
     AppRoutingModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [
+    InviteService
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

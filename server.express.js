@@ -13,7 +13,7 @@ server.use(middlewares);
 // You can use the one used by JSON Server
 server.use(jsonServer.bodyParser);
 server.use((req, res, next) => {
-  if (req.method === 'POST') {
+  if (['POST', 'PUT'].includes(req.method)) {
     const email = req.body.email;
     if (email409.includes(req.body.email)) {
       res.sendStatus(409);
