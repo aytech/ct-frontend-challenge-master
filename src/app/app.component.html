@@ -1,11 +1,12 @@
 <div style="text-align:center">
   <img alt="Comtravo Logo" height="35" src="/assets/logo.svg" width="209">
+  <h1>Welcome to {{ title }}!</h1>
 </div>
 
 <div class="content">
-    <div class="nav">
-        <a class="link" [routerLink]="['/']">List</a>
-        <a class="link" [routerLink]="['/invite']">Invite</a>
-    </div>
+  <div class="nav">
+    <a class="link" [routerLink]="['/']">List</a>
+    <a class="link" [routerLink]="['/invite']">Invite</a>
+  </div>
   <router-outlet></router-outlet>
 </div>

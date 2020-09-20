@@ -1,22 +1,22 @@
 <table>
-    <thead>
-    <tr>
-        <th>Id</th>
-        <th>Email</th>
-        <th>Invitation status</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr *ngFor="let user of (users$ | async)">
-        <td>{{ user.id }}</td>
-        <td>{{ user.email }}</td>
-        <td [ngClass]="{'error': user.invited === false, 'success': user.invited === true}">
-            {{ user.invited === true ? 'Invited' : user.message }}
-        </td>
-    </tr>
-    <tr>
-        <td colspan="2" class="strong">Total users invited:</td>
-        <td class="strong">{{ getTotal() }}</td>
-    </tr>
-    </tbody>
+  <thead>
+  <tr>
+    <th>Id</th>
+    <th>Email</th>
+    <th>Invitation status</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let user of (users$ | async)">
+    <td>{{ user.id }}</td>
+    <td>{{ user.email }}</td>
+    <td [ngClass]="{'error': user.invited === false, 'success': user.invited === true}">
+      {{ user.invited === true ? 'Invited' : user.message }}
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="strong">Total users invited:</td>
+    <td class="strong">{{ getTotal() }}</td>
+  </tr>
+  </tbody>
 </table>

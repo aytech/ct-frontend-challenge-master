@@ -33,13 +33,13 @@ export class InviteComponent implements OnInit {
     user.invited = true;
     this.inviteService.update(user);
     this.inviteService.incrementInvited();
-  };
+  }
 
   errorHandler = (user: User, error: any) => {
     user.invited = false;
     user.message = error.statusText;
     this.inviteService.update(user);
-  };
+  }
 
   onSubmit(): void {
     this.inviteService.clearCache().getUsers().subscribe(_users => {
